@@ -7,6 +7,11 @@ $urlFinal = $urlBase . $urlProductDetail;
 
 $html = file_get_html($urlFinal);
 
-// Find all images
+/* Find all images
 foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
+*/
+
+$ret = $html->find('class="image-viewer"');
+
+var_dump($ret);
