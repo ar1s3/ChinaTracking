@@ -1,3 +1,2 @@
 <?php
-
-var_dump(1+2);
+require 'simple_html_dom.php';
