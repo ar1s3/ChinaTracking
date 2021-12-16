@@ -1,5 +1,5 @@
 <?php
-require 'library/simple_html_dom.php';
+require_once('library/simple_html_dom.php');
 
 $html = file_get_html('http://www.google.com/');
 
