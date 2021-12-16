@@ -14,8 +14,10 @@ foreach ($html->find('img') as $element)
 */
 
 //$ret1 = $html->find('div[class=image-viewer]');
-$ret2 = $html->find('div.image-viewer',0)->children(1);
-    //->outertext;
+$ret0 = $html->find('div.image-viewer',0)->children(0)>outertext;
 
-var_dump($ret2);
+$ret1 = $html->find('div.image-viewer',0)->children(1)>outertext;
+$ret2 = $html->find('div.image-viewer',0)->children(2)>outertext;
+
+var_dump($ret0,$ret1,$ret2);
 
