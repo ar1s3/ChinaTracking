@@ -13,7 +13,7 @@ foreach ($html->find('img') as $element)
 */
 
 //$ret1 = $html->find('div[class=image-viewer]');
-$ret2 = $html->find('.image-viewer');
+$ret2 = $html->find('div div div div');
 
 var_dump($ret2);
 
