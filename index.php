@@ -15,5 +15,5 @@ foreach ($html->find('img') as $element)
 
 //$ret1 = $html->find('div[class=image-viewer]');
 $ret0 = $html->find("div[class=image-viewer]");
-var_dump($ret0);
+var_dump($ret0[0]->plaintext);
 
