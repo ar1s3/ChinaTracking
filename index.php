@@ -9,4 +9,4 @@ $html = file_get_html($urlFinal);
 
 // Find all images
 foreach ($html->find('img') as $element)
-    echo "<img src=\"".$element->src ."<\/img>". '<br>';
+    echo "<img src=\"".$element->src ."\"</img>". '<br>';
