@@ -15,4 +15,4 @@ foreach ($html->find('img') as $element)
 $ret1 = $html->find('div[class=image-holder]');
 $ret2 = $html->find('div.image-holder');
 
-var_dump($ret);
+var_dump($ret1);var_dump($ret2);
