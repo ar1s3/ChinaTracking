@@ -14,7 +14,7 @@ foreach ($html->find('img') as $element)
 */
 
 //$ret1 = $html->find('div[class=image-viewer]');
-$ret0 = $html->find("div[class=image-viewer]");
+$ret0 = $html->find("div[class=image-nav]");
 echo "<pre>";
-var_dump($ret0[0]['class']);
+var_dump($ret0);
 
