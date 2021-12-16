@@ -1,12 +1,12 @@
 <?php
 require_once('library/simple_html_dom.php');
 
-$html = file_get_html('http://www.google.com/');
+$urlBase = "https://www.saramart.pl/it-IT/detail/";
+$urlProductDetail = "27639316";
+$urlFinal = $urlBase . $urlProductDetail;
+
+$html = file_get_html($urlFinal);
 
 // Find all images
 foreach ($html->find('img') as $element)
     echo $element->src . '<br>';
-
-// Find all links
-foreach ($html->find('a') as $element)
-    echo $element->href . '<br>';
