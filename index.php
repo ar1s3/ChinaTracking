@@ -12,8 +12,8 @@ foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
 */
 
-$ret1 = $html->find('div[class=image-viewer]');
-$ret2 = $html->find('div.image-viewer');
+//$ret1 = $html->find('div[class=image-viewer]');
+$ret2 = $html->find('.image-viewer');
 
-var_dump($ret1,$ret2);
+var_dump($ret2);
 
