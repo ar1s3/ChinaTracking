@@ -5,10 +5,7 @@ $urlBase = "https://www.saramart.pl/it-IT/detail/";
 $urlProductDetail = "27639316";
 $urlFinal = $urlBase . $urlProductDetail;
 
-//$html = file_get_html($urlFinal);
-$cl = curl_exec($urlFinal);
-$html = new simple_html_dom();
-$html->load($cl);
+$html = file_get_html($urlFinal);
 
 
 /* Find all images
