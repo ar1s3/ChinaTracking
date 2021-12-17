@@ -17,10 +17,10 @@ foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
 */
 
+//titolo articolo magari echo file_get_html($urlFinal)->plaintext;
 
-echo file_get_html($urlFinal)->plaintext;
-
+$ret = $html->find('img', 0);
 
 //echo "<pre>";
-//var_dump($a);
+var_dump($ret);
 
