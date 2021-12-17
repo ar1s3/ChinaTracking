@@ -1,26 +1,20 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
 
-require_once('library/simple_html_dom.php');
+require_once('library/utils.php');
 
 $urlBase = "https://www.saramart.pl/it-IT/detail/";
 $urlProductDetail = "27639316";
 $urlFinal = $urlBase . $urlProductDetail;
 
-$html = file_get_html($urlFinal,false);
 
-/*
-foreach($html->find('img') as $element)
-    echo $element->src . '<br>';
+//titolo articolo magari echo file_get_html($urlFinal)->plaintext;
 
-foreach($html->find('a') as $element)
-    echo $element->href . '<br>';
-*/
 
-$ret = $html->find('.app');
+$f = curl_get_file_contents($urlFinal);
 
-//titolo articolo magari echo file_get_html($urlFinal)->plaintext;ù
+$dom = new DOMDocument();
+@$dom->loadHTML($f);
+$data = $dom->getElementById("app");
+$html = $dom->saveHTML($data);
+echo $html;
 
-var_dump($ret);
