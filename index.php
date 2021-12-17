@@ -10,7 +10,7 @@ $urlFinal = $urlBase . $urlProductDetail;
 //titolo articolo magari echo file_get_html($urlFinal)->plaintext;
 
 
-$f = curl_get_file_contents($urlFinal);
+$f = file_get_contents_curl($urlFinal);
 
 $dom = new DOMDocument();
 @$dom->loadHTML($f);
