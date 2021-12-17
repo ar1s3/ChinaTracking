@@ -30,7 +30,8 @@ class Parsehub
     public function __construct($api_key, $api_url = '', $logpath = '')
     {
         if (empty(self::$config)) {
-            $logpath = empty($logpath) ? __DIR__ . '/../../log/parsehub.log' : $logpath;
+            $logpath = "";
+                //empty($logpath) ? __DIR__ . '/../../log/parsehub.log' : $logpath;
             $api_url = empty($api_url) ? 'https://www.parsehub.com/api/v2' : $api_url;
             self::$config = array(
                 'api_key' => $api_key,
