@@ -5,21 +5,22 @@ require_once('library/utils.php');
 $urlBase = "https://www.saramart.pl/it-IT/detail/";
 $urlProductDetail = "27639316";
 $urlFinal = $urlBase . $urlProductDetail;
+$html = file_get_html($urlFinal);
 
 
-//titolo articolo magari echo file_get_html($urlFinal)->plaintext;
+$agent = 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36';
 
-/*
-$a = new utils();
-$a->file_get_contents_curl("google.it");
-$dom = new DOMDocument();
-@$dom->loadHTML($a);
-$data = $dom->getElementById("app");
-$html = $dom->saveHTML($data);
-echo $html;
-*/
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_VERBOSE, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_USERAGENT, $agent);
+curl_setopt($ch, CURLOPT_URL, $urlFinal);
+$result = curl_exec($ch);
 
-$a = file_get_html("https://www.google.it");
-echo "<pre>";
-var_dump($a);
+$myfile = fopen("html.txt", "w") or die("Unable to open file");
+fwrite($myfile, $result);
 
+fclose($myfile);
+
+var_dump("ok");
