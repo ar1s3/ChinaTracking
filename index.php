@@ -2,6 +2,7 @@
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
+
 require_once('library/simple_html_dom.php');
 
 $urlBase = "https://www.saramart.pl/it-IT/detail/";
@@ -15,15 +16,11 @@ $html = file_get_html($urlFinal,false);
 foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
 */
-foreach ($html->find('image-viewer') as $element){
-    echo "PIPPO: ".$element;
-
-}
 
 
+echo file_get_html($urlFinal)->plaintext;
 
 
-
-echo "<pre>";
-//var_dump($class);
+//echo "<pre>";
+//var_dump($a);
 
