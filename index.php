@@ -19,7 +19,7 @@ $html = $dom->saveHTML($data);
 echo $html;
 */
 
-$a = file_get_contents("https://www.google.it");
+$a = file_get_html("https://www.google.it");
 echo "<pre>";
 var_dump($a);
 
