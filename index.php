@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 require_once('library/simple_html_dom.php');
 
 $urlBase = "https://www.saramart.pl/it-IT/detail/";
@@ -13,8 +16,10 @@ foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
 */
 
-//$ret1 = $html->find('div[class=image-viewer]');
-$ret0 = $html->find('a, img');
+$class = $html->find('.goods');
+
+
+
 echo "<pre>";
-var_dump($ret0);
+var_dump($class);
 
