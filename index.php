@@ -8,18 +8,22 @@ $urlBase = "https://www.saramart.pl/it-IT/detail/";
 $urlProductDetail = "27639316";
 $urlFinal = $urlBase . $urlProductDetail;
 
-$html = file_get_html($urlFinal);
+$html = file_get_html($urlFinal,false);
 
 
 /* Find all images
 foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
 */
+foreach ($html->find('image-viewer') as $element){
+    echo "PIPPO: ".$element;
 
-$class = $html->find('.goods');
+}
+
+
 
 
 
 echo "<pre>";
-var_dump($class);
+//var_dump($class);
 
