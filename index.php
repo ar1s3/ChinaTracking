@@ -12,10 +12,10 @@ $urlFinal = $urlBase . $urlProductDetail;
 $html = file_get_html($urlFinal,false);
 
 
-/* Find all images
+/* Find all images*/
 foreach ($html->find('img') as $element)
     echo "<img src=\"".$element->src ."\"</img>". '<br>';
-*/
+
 
 //titolo articolo magari echo file_get_html($urlFinal)->plaintext;
 
