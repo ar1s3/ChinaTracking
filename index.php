@@ -11,11 +11,16 @@ $urlFinal = $urlBase . $urlProductDetail;
 
 $html = file_get_html($urlFinal,false);
 
-
+/*
 foreach($html->find('img') as $element)
     echo $element->src . '<br>';
 
 foreach($html->find('a') as $element)
     echo $element->href . '<br>';
+*/
 
-//titolo articolo magari echo file_get_html($urlFinal)->plaintext;
+$ret = $html->find('.app');
+
+//titolo articolo magari echo file_get_html($urlFinal)->plaintext;ù
+
+var_dump($ret);
