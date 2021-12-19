@@ -42,9 +42,8 @@ class utils {
 
     public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string {
 
-        //$parsehub = new Parsehub($api_key);
-        $yif = new Parsehub("8gup");
-        return $yif->getLastReadyRunData($prj_key);
+        $parsehub = new Parsehub($api_key);
+        return $parsehub->getLastReadyRunData($prj_key);
 
     }
 
