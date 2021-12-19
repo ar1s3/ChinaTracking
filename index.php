@@ -1,6 +1,7 @@
 <?php
 require_once('library/utils.php');
 
+//b
 
 $urlBase = "https://www.saramart.pl/it-IT/detail/";
 $urlProductDetail = "27639316";
