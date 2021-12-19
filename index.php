@@ -2,7 +2,6 @@
 require_once('library/utils.php');
 
 
-
 $urlBase = "https://www.saramart.pl/it-IT/detail/";
 $urlProductDetail = "27639316";
 $urlFinal = $urlBase . $urlProductDetail;
@@ -12,8 +11,6 @@ $agent = 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gec
 
 $util = new utils();
 
-echo($util->getPrjList());
+$keys = ['iphone 6s case'];
 
-
-
-
+$util->runPrj($keys);
