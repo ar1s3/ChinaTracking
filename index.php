@@ -13,4 +13,13 @@ $util = new utils();
 
 $keys = ['iphone 6s case'];
 
-$util->runPrj($keys);
+//$util->runPrj($keys);
+
+
+$dataJson = $util->getDataPrj();
+
+//$dataBeauty = str_replace(array("{",/* "}",*/ '","'), array("{<br />&nbsp;&nbsp;&nbsp;&nbsp;", "<br />}", '",<br />&nbsp;&nbsp;&nbsp;&nbsp;"'), $dataJson);
+
+var_dump($dataJson);
+
+

@@ -16,11 +16,9 @@ use Parsehub\Parsehub;
 const MY_API_KEY = "tTXn1ETK9h_V";
 const MY_PRJ_KEY = "ty88FLuX1Gta";
 
-class utils
-{
+class utils {
 
-    function file_get_contents_curl($url)
-    {
+    function file_get_contents_curl($url) {
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -34,26 +32,24 @@ class utils
         return $data;
     }
 
-    public function getPrjList($api_key = MY_API_KEY)
-    {
+    public function getPrjList($api_key = MY_API_KEY) {
         $parsehub = new Parsehub($api_key);
         $projectList = $parsehub->getProjectList();
         echo "<pre>";
         var_dump($projectList);
     }
 
-    public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY)
-    {
+    public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string {
 
         $parsehub = new Parsehub($api_key);
-        $data = $parsehub->getLastReadyRunData($prj_key);
-        print $data;
+        return $parsehub->getLastReadyRunData($prj_key);
 
     }
 
-    public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY)
-    {
-        if(empty($keywords)){
+    public function customGetDataPrj() {}
+
+    public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
+        if (empty($keywords)) {
             return 0;
         }
 
