@@ -7,7 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
-    'PHPCurl\\CurlWrapper\\' => array($vendorDir . '/phpcurl/curlwrapper/src'),
-    'PHPCurl\\CurlHttp\\' => array($vendorDir . '/phpcurl/curlhttp/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
 );
