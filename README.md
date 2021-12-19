@@ -1,3 +1,0 @@
-# ChinaTracking
-
-TEST PER LETTURA

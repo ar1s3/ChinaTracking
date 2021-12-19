@@ -1,0 +1,371 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e7daef11f1d3a009afb32c3c2946a5fc",
+    "packages": [
+        {
+            "name": "legierski/aes",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/legierski/AES.git",
+                "reference": "2318a7f1efe780e250cde21dd5dc74d5efdf9c93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/legierski/AES/zipball/2318a7f1efe780e250cde21dd5dc74d5efdf9c93",
+                "reference": "2318a7f1efe780e250cde21dd5dc74d5efdf9c93",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Legierski\\AES": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Legierski",
+                    "email": "peter@legierski.net",
+                    "homepage": "http://legierski.net"
+                }
+            ],
+            "description": "OpenSSL-compatible AES library",
+            "keywords": [
+                "CryptoJS",
+                "Gibberish AES",
+                "Rijndael",
+                "aes",
+                "decryption",
+                "encryption",
+                "mcrypt",
+                "openssl"
+            ],
+            "support": {
+                "issues": "https://github.com/legierski/AES/issues",
+                "source": "https://github.com/legierski/AES/tree/master"
+            },
+            "time": "2014-06-23T22:59:49+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c41c218e239b50446fd883acb1ecfd4b770caeae",
+                "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "phpunit/phpunit": "~4.0",
+                "raven/raven": "~0.5",
+                "ruflin/elastica": "0.90.*",
+                "swiftmailer/swiftmailer": "~5.3",
+                "videlalvaro/php-amqplib": "~2.4"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/1.13.0"
+            },
+            "time": "2015-03-05T01:12:12+00:00"
+        },
+        {
+            "name": "msankhala/parsehub-php",
+            "version": "v1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/msankhala/parsehub-php.git",
+                "reference": "3c4e96094edca8dd5522ff5e41d9cf506ef69db6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/msankhala/parsehub-php/zipball/3c4e96094edca8dd5522ff5e41d9cf506ef69db6",
+                "reference": "3c4e96094edca8dd5522ff5e41d9cf506ef69db6",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "~1.13",
+                "nategood/httpful": "0.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsehub": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mahesh Sankhala",
+                    "email": "mahesh.saini@srijan.in"
+                }
+            ],
+            "description": "Php wrapper classes for Parsehub REST api.",
+            "homepage": "http://msankhala.wordpress.com",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "parsehub",
+                "rest",
+                "restful"
+            ],
+            "support": {
+                "issues": "https://github.com/msankhala/parsehub-php/issues",
+                "source": "https://github.com/msankhala/parsehub-php/tree/master"
+            },
+            "time": "2015-08-06T11:06:00+00:00"
+        },
+        {
+            "name": "nategood/httpful",
+            "version": "0.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nategood/httpful.git",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nategood/httpful/zipball/c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Httpful": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nate Good",
+                    "email": "me@nategood.com",
+                    "homepage": "http://nategood.com"
+                }
+            ],
+            "description": "A Readable, Chainable, REST friendly, PHP HTTP Client",
+            "homepage": "http://github.com/nategood/httpful",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "requests",
+                "rest",
+                "restful"
+            ],
+            "support": {
+                "issues": "https://github.com/nategood/httpful/issues",
+                "source": "https://github.com/nategood/httpful/tree/v0.2.20"
+            },
+            "time": "2015-10-26T16:11:30+00:00"
+        },
+        {
+            "name": "phpconsole/phpconsole",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpconsole/phpconsole.git",
+                "reference": "a957cbc1f0bc065f1f6fe028929f73c3053647f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpconsole/phpconsole/zipball/a957cbc1f0bc065f1f6fe028929f73c3053647f7",
+                "reference": "a957cbc1f0bc065f1f6fe028929f73c3053647f7",
+                "shasum": ""
+            },
+            "require": {
+                "legierski/aes": "0.1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "suggest": {
+                "ext-openssl": "Allow AES-256 encryption of your data"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phpconsole": "src/"
+                },
+                "files": [
+                    "src/functions/p.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Legierski",
+                    "email": "peter@legierski.net",
+                    "homepage": "http://legierski.net"
+                }
+            ],
+            "description": "A detached logging facility for PHP to aid your daily development routine",
+            "homepage": "http://phpconsole.com",
+            "keywords": [
+                "console",
+                "debug",
+                "debugging",
+                "log",
+                "logging",
+                "online",
+                "php",
+                "phpconsole",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/phpconsole/phpconsole/issues",
+                "source": "https://github.com/phpconsole/phpconsole/tree/master"
+            },
+            "time": "2016-04-01T10:53:37+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "simon/chinatracking",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "simon",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "1.13.0",
+    "phpconsole/phpconsole": "3.5.1",
+    "msankhala/parsehub-php": "v1.0.10"
+  }
+}
