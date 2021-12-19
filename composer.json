@@ -1,6 +1,7 @@
 {
     "require": {
         "msankhala/parsehub-php": "^2.0",
-        "nategood/httpful": "0.2.20"
+        "nategood/httpful": "0.2.20",
+        "ext-curl": "*"
     }
 }
