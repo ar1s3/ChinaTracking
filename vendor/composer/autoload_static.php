@@ -11,6 +11,8 @@ class ComposerStaticInit818eb43a3575d3238ec5754e9166d81e {
         'P' =>
             array(
                 'Psr\\Log\\' => 8,
+                'PHPCurl\\CurlWrapper\\' => 20,
+                'PHPCurl\\CurlHttp\\' => 17,
             ),
         'M' =>
             array(
@@ -22,6 +24,14 @@ class ComposerStaticInit818eb43a3575d3238ec5754e9166d81e {
         'Psr\\Log\\' =>
             array(
                 0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+            ),
+        'PHPCurl\\CurlWrapper\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/phpcurl/curlwrapper/src',
+            ),
+        'PHPCurl\\CurlHttp\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/phpcurl/curlhttp/src',
             ),
         'Monolog\\' =>
             array(

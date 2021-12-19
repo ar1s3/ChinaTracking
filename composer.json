@@ -12,6 +12,7 @@
   "require": {
     "monolog/monolog": "1.13.0",
     "msankhala/parsehub-php": "^2.0",
-    "nategood/httpful": "0.2.20"
+    "nategood/httpful": "0.2.20",
+    "phpcurl/curlhttp": "2.0.0"
   }
 }

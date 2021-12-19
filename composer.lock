@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "70f753b7635fffc7b8efcb833cf69d5f",
+  "content-hash": "d1ba73f39d2e7d156104071e9e118b9e",
   "packages": [
     {
       "name": "monolog/monolog",
@@ -25,16 +25,16 @@
         "psr/log": "~1.0"
       },
       "provide": {
-                "psr/log-implementation": "1.0.0"
-            },
-            "require-dev": {
-                "aws/aws-sdk-php": "~2.4, >2.4.8",
-                "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "phpunit/phpunit": "~4.0",
-                "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*",
-                "swiftmailer/swiftmailer": "~5.3",
+        "psr/log-implementation": "1.0.0"
+      },
+      "require-dev": {
+        "aws/aws-sdk-php": "~2.4, >2.4.8",
+        "doctrine/couchdb": "~1.0@dev",
+        "graylog2/gelf-php": "~1.0",
+        "phpunit/phpunit": "~4.0",
+        "raven/raven": "~0.5",
+        "ruflin/elastica": "0.90.*",
+        "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
             },
             "suggest": {
@@ -67,16 +67,16 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
+                  "homepage": "http://seld.be"
                 }
             ],
-            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
-            "keywords": [
-              "log",
-              "logging",
-              "psr-3"
-            ],
+      "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+      "homepage": "http://github.com/Seldaek/monolog",
+      "keywords": [
+        "log",
+        "logging",
+        "psr-3"
+      ],
       "support": {
         "issues": "https://github.com/Seldaek/monolog/issues",
         "source": "https://github.com/Seldaek/monolog/tree/1.13.0"
@@ -107,16 +107,16 @@
           "Parsehub": "src/"
         }
       },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mahesh Sankhala",
-                    "email": "mahesh.saini@srijan.in"
-                }
-            ],
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Mahesh Sankhala",
+          "email": "mahesh.saini@srijan.in"
+        }
+      ],
             "description": "Php wrapper classes for Parsehub REST api.",
             "homepage": "http://msankhala.wordpress.com",
             "keywords": [
@@ -178,26 +178,146 @@
                 "curl",
                 "http",
                 "requests",
-                "rest",
-                "restful"
+              "rest",
+              "restful"
             ],
-            "support": {
-                "issues": "https://github.com/nategood/httpful/issues",
-                "source": "https://github.com/nategood/httpful/tree/v0.2.20"
-            },
-            "time": "2015-10-26T16:11:30+00:00"
+          "support": {
+            "issues": "https://github.com/nategood/httpful/issues",
+            "source": "https://github.com/nategood/httpful/tree/v0.2.20"
+          },
+          "time": "2015-10-26T16:11:30+00:00"
         },
+    {
+      "name": "phpcurl/curlhttp",
+      "version": "2.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpcurl/curlhttp.git",
+        "reference": "29b099c9f5bbb83ba83d7b3fb66a5fa0e399e165"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpcurl/curlhttp/zipball/29b099c9f5bbb83ba83d7b3fb66a5fa0e399e165",
+        "reference": "29b099c9f5bbb83ba83d7b3fb66a5fa0e399e165",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.5",
+        "phpcurl/curlwrapper": "^2.1"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^4.0 || ^5.0",
+        "squizlabs/php_codesniffer": "^2.0",
+        "symfony/process": "^2"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "PHPCurl\\CurlHttp\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
         {
-            "name": "psr/log",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+          "name": "Alexey Karapetov",
+          "email": "karapetov@gmail.com",
+          "role": "Developer"
+        }
+      ],
+      "description": "Super simple HTTP client",
+      "keywords": [
+        "OOP",
+        "curl",
+        "curl_multi",
+        "curl_share",
+        "dependency",
+        "injection",
+        "mock",
+        "phpunit",
+        "testable",
+        "testing",
+        "wrapper"
+      ],
+      "support": {
+        "issues": "https://github.com/phpcurl/curlhttp/issues",
+        "source": "https://github.com/phpcurl/curlhttp/tree/master"
+      },
+      "time": "2017-01-21T06:04:53+00:00"
+    },
+    {
+      "name": "phpcurl/curlwrapper",
+      "version": "2.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpcurl/curlwrapper.git",
+        "reference": "9e58c7f0d52c5f44e5a50f39d28c9870d4b1de8c"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpcurl/curlwrapper/zipball/9e58c7f0d52c5f44e5a50f39d28c9870d4b1de8c",
+        "reference": "9e58c7f0d52c5f44e5a50f39d28c9870d4b1de8c",
+        "shasum": ""
+      },
+      "require": {
+        "ext-curl": "*",
+        "php": ">=5.5.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.0",
+        "squizlabs/php_codesniffer": "^2.0"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "PHPCurl\\CurlWrapper\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Alexey Karapetov",
+          "email": "karapetov@gmail.com",
+          "role": "Developer"
+        }
+      ],
+      "description": "The simplest OOP wrapper for curl, curl_multi, curl_share functions. Use CURL as a dependency, not hard-coded!",
+      "keywords": [
+        "OOP",
+        "Phpcurl",
+        "curl",
+        "curl_multi",
+        "curl_share",
+        "dependency",
+        "injection",
+        "mock",
+        "phpunit",
+        "testable",
+        "testing",
+        "wrapper"
+      ],
+      "support": {
+        "issues": "https://github.com/phpcurl/curlwrapper/issues",
+        "source": "https://github.com/phpcurl/curlwrapper/tree/master"
+      },
+      "time": "2017-01-21T03:54:06+00:00"
+    },
+    {
+      "name": "psr/log",
+      "version": "1.1.4",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/log.git",
+        "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
                 "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
