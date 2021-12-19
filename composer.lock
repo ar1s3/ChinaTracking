@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "4d15ff1ad1bca7b3780c8ed5f8d1bf9c",
+  "content-hash": "70f753b7635fffc7b8efcb833cf69d5f",
   "packages": [
     {
       "name": "monolog/monolog",
@@ -15,16 +15,16 @@
         "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae"
       },
       "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c41c218e239b50446fd883acb1ecfd4b770caeae",
-                "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
-            },
-            "provide": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c41c218e239b50446fd883acb1ecfd4b770caeae",
+        "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.0",
+        "psr/log": "~1.0"
+      },
+      "provide": {
                 "psr/log-implementation": "1.0.0"
             },
             "require-dev": {
@@ -73,16 +73,16 @@
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
             "homepage": "http://github.com/Seldaek/monolog",
             "keywords": [
-                "log",
-                "logging",
-                "psr-3"
+              "log",
+              "logging",
+              "psr-3"
             ],
-            "support": {
-                "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/1.13.0"
-            },
-            "time": "2015-03-05T01:12:12+00:00"
-        },
+      "support": {
+        "issues": "https://github.com/Seldaek/monolog/issues",
+        "source": "https://github.com/Seldaek/monolog/tree/1.13.0"
+      },
+      "time": "2015-03-05T01:12:12+00:00"
+    },
     {
       "name": "msankhala/parsehub-php",
       "version": "v2.0.1",
@@ -97,16 +97,16 @@
         "reference": "dbfa5d75010dd0e0f60319e5cab21d1c71fa9a2f",
         "shasum": ""
       },
-            "require": {
-                "monolog/monolog": "~1.13",
-                "nategood/httpful": "0.2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Parsehub": "src/"
-                }
-            },
+      "require": {
+        "monolog/monolog": "~1.13",
+        "nategood/httpful": "0.2.*"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-0": {
+          "Parsehub": "src/"
+        }
+      },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
