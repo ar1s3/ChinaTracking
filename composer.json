@@ -11,6 +11,6 @@
   ],
   "require": {
     "monolog/monolog": "1.13.0",
-    "msankhala/parsehub-php": "v1.0.10"
+    "msankhala/parsehub-php": "^2.0"
   }
 }
