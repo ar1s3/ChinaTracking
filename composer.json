@@ -12,6 +12,6 @@
   "require": {
     "monolog/monolog": "1.13.0",
     "phpconsole/phpconsole": "3.5.1",
-    "msankhala/parsehub-php": "v1.0.10"
+    "msankhala/parsehub-php": "^2.0"
   }
 }

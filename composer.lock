@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7daef11f1d3a009afb32c3c2946a5fc",
+    "content-hash": "0b47a9d25137470db080b5deef39431c",
     "packages": [
         {
             "name": "legierski/aes",
@@ -141,16 +141,16 @@
         },
         {
             "name": "msankhala/parsehub-php",
-            "version": "v1.0.10",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msankhala/parsehub-php.git",
-                "reference": "3c4e96094edca8dd5522ff5e41d9cf506ef69db6"
+                "reference": "dbfa5d75010dd0e0f60319e5cab21d1c71fa9a2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msankhala/parsehub-php/zipball/3c4e96094edca8dd5522ff5e41d9cf506ef69db6",
-                "reference": "3c4e96094edca8dd5522ff5e41d9cf506ef69db6",
+                "url": "https://api.github.com/repos/msankhala/parsehub-php/zipball/dbfa5d75010dd0e0f60319e5cab21d1c71fa9a2f",
+                "reference": "dbfa5d75010dd0e0f60319e5cab21d1c71fa9a2f",
                 "shasum": ""
             },
             "require": {
@@ -185,9 +185,9 @@
             ],
             "support": {
                 "issues": "https://github.com/msankhala/parsehub-php/issues",
-                "source": "https://github.com/msankhala/parsehub-php/tree/master"
+                "source": "https://github.com/msankhala/parsehub-php/tree/v2.0.1"
             },
-            "time": "2015-08-06T11:06:00+00:00"
+            "time": "2015-08-25T07:23:48+00:00"
         },
         {
             "name": "nategood/httpful",
