@@ -1,0 +1,12 @@
+/vendor/
+/*.tgz
+/dist/
+/vendor/
+.buildpath
+.project
+.settings
+*.sublime-*
+.phpintel
+log/parsehub-local.log
+src/config.php
+index.php
