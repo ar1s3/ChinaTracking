@@ -46,7 +46,25 @@ class utils {
 
     }
 
-    public function customGetDataPrj() {}
+    public function customGetDataPrj($format = 'csv', $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
+
+        $params = http_build_query(array(
+            "api_key" => $api_key,
+            "format" => $format
+        ));
+
+        $result = file_get_contents(
+            'https://parsehub.com/api/v2/projects/' . $prj_key . '/last_ready_run/data?' . $params,
+            false,
+            stream_context_create(array(
+                'http' => array(
+                    'method' => 'GET'
+                )
+            ))
+        );
+        echo($result);
+
+    }
 
     public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
         if (empty($keywords)) {
@@ -63,7 +81,6 @@ class utils {
             // Set send_email options. Skip to remain this value default.
             'send_email' => 0
         );
-        $run_obj = $parsehub->runProject($prj_key, $options);
-        var_dump($run_obj);
+        return $parsehub->runProject($prj_key, $options);
     }
 }

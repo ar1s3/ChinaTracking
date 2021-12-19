@@ -20,6 +20,6 @@ $dataJson = $util->getDataPrj();
 
 //$dataBeauty = str_replace(array("{",/* "}",*/ '","'), array("{<br />&nbsp;&nbsp;&nbsp;&nbsp;", "<br />}", '",<br />&nbsp;&nbsp;&nbsp;&nbsp;"'), $dataJson);
 
-var_dump($dataJson);
+
 
 
