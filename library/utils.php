@@ -24,8 +24,7 @@ class utils {
     public function getPrjList($api_key = MY_API_KEY) {
         $parsehub = new Parsehub($api_key);
         $projectList = $parsehub->getProjectList();
-        echo "<pre>";
-        var_dump($projectList);
+        return ($projectList);
     }
 
     public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string {
@@ -52,8 +51,7 @@ class utils {
             // Set send_email options. Skip to remain this value default.
             'send_email' => 0
         );
-        $run_obj = $parsehub->runProject($prj_key, $options);
-        var_dump($run_obj);
+        return $parsehub->runProject($prj_key, $options);
     }
 
 }
