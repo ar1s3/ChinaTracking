@@ -2,3 +2,5 @@
 [2021-12-20 23:36:54] ParsehubLogger.ERROR: Unauthorized access. Not able to get data from parsehub. Please check api key. [] []
 [2021-12-20 23:36:59] ParsehubLogger.ERROR: Unauthorized access. Not able to get data from parsehub. Please check api key. [] []
 [2021-12-20 23:37:43] ParsehubLogger.ERROR: Bad request. Not able to get data from parsehub. [] []
+[2021-12-20 23:47:11] ParsehubLogger.INFO: Unable to start project on parsehub:  {"context":{"start_url":"https://www.saramart.pl/it-IT/s/","keywords":["monclermoncler man"],"project_token":"ty88FLuX1Gta","api_key":"tTXn1ETK9h_V","requestbody_body":"api_key=tTXn1ETK9h_V&start_url=https%3A%2F%2Fwww.saramart.pl%2Fit-IT%2Fs%2F&start_value_override=%7B%22keywords%22%3A%5B%22monclermoncler+man%22%5D%7D"}} []
+[2021-12-20 23:48:57] ParsehubLogger.INFO: Project run successfully on parsehub with values:  {"context":{"start_url":"https://www.saramart.pl/it-IT/s/","keywords":["monclermoncler man"],"send_email":0,"run_token":"tXh-6jBWfscw","project_token":"ty88FLuX1Gta"}} []

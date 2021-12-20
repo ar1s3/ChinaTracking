@@ -193,7 +193,8 @@ class Parsehub {
             ->send();
 
         if ($this->isResponseValid($response)) {
-            $run_object = json_decode($response->body);
+            //$run_object = json_decode($response->body);
+            $run_object = $response->body;
             // If this is new run then parsehub return complete run object.
             if (isset($run_object->project_token) && isset($run_object->run_token)) {
                 self::$logger->info('Project run successfully on parsehub with values: ', [

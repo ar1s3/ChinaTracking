@@ -14,6 +14,7 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Parsehub\Parsehub;
+use function PHPUnit\Framework\throwException;
 
 const MY_API_KEY = "tTXn1ETK9h_V";
 const MY_PRJ_KEY = "ty88FLuX1Gta";
@@ -35,8 +36,8 @@ class utils {
     }
 
     public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
-        if (empty($keywords)) {
-            return 0;
+        if (!isset($keywords)) {
+            throwException("Empty params");
         }
 
         $parsehub = new Parsehub($api_key);
