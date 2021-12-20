@@ -7,4 +7,5 @@ require_once('library/utils.php');
 
 $parse = new utils();
 
+echo "<pre>";
 print $parse->getDataPrj();
