@@ -7,9 +7,4 @@ require_once('library/utils.php');
 
 $parse = new utils();
 
-$keys = array("moncler");
-
-$res = $parse->runPrj($keys);
-
-var_dump($res);
-
+print $parse->getDataPrj();

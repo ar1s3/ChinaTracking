@@ -12,7 +12,9 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/../vendor/autoload.php';
+
 use Parsehub\Parsehub;
+
 const MY_API_KEY = "tTXn1ETK9h_V";
 const MY_PRJ_KEY = "ty88FLuX1Gta";
 
@@ -24,14 +26,13 @@ class utils {
         return ($projectList);
     }
 
+    /* retun dati del progetto */
     public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string {
 
         $parsehub = new Parsehub($api_key);
         return $parsehub->getLastReadyRunData($prj_key);
 
     }
-
-    public function customGetDataPrj() {}
 
     public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
         if (empty($keywords)) {
