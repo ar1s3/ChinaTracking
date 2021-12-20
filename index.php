@@ -7,10 +7,8 @@ require_once('library/utils.php');
 
 $parse = new utils();
 
-$keys = array("moncler", "moncler man");
-
-return $parse->runPrj($keys);
+//$keys = array("moncler", "moncler man"); return $parse->runPrj($keys);
 
 
-//echo "<pre>";
-//print $parse->getDataPrj();
+echo "<pre>";
+print $parse->getDataPrj();

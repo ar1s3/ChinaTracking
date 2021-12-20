@@ -37,7 +37,9 @@ class utils {
 
     public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
         if (!isset($keywords)) {
-            throwException("Empty params");
+            throwException("Empty dats");
+        } else {
+            $keywords = strtr(trim($keywords), ' ', '%20'); //spazio in url
         }
 
         $parsehub = new Parsehub($api_key);
