@@ -1,7 +1,5 @@
 <?php
 
-namespace saramart;
-
 use Parsehub\Parsehub;
 use function PHPUnit\Framework\throwException;
 
