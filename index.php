@@ -11,10 +11,10 @@ $saraObj = new saramart();
 
 
 //$keys = array("moncler", "moncler man"); return $parse->runPrj($keys);
-
+/*
 $saraObj->runPrj("nike af1");
 echo "attendo dati";
 sleep(50);
 echo "passati 50 sec";
-
+*/
 print_r($saraObj->getDataPrj());
