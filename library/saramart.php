@@ -26,12 +26,12 @@ class saramart
     }
 
     /* esegue parsing su keys */
-    public function runPrj(array $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY)
+    public function runPrj(string $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY)
     {
         if (!isset($keywords)) {
             throwException("Empty dats");
         } else {
-            $keywords = strtr(trim($keywords), ' ', '%20'); //spazio in url
+            $keywords = str_replace(" ", "%20", $keywords); //spazio in url
         }
 
         $parsehub = new Parsehub($api_key);
@@ -40,7 +40,7 @@ class saramart
             // on parsehub.
             'start_url' => 'https://www.saramart.pl/it-IT/s/',
             // Enter comma separated list of keywords to pass into `start_value_override`
-            'keywords' => implode($keywords),
+            'keywords' => $keywords,
             // Set send_email options. Skip to remain this value default.
             'send_email' => 0
         );
