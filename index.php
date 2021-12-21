@@ -18,7 +18,9 @@ sleep(50);
 echo "passati 50 sec";
 */
 
-foreach ($saraObj->getDataPrj() as $img) {
+print_r($saraObj->getDataPrj());
+
+foreach ($saraObj->getDataPrj() as $key => $img) {
 
     echo $img;
 
