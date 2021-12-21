@@ -17,5 +17,10 @@ echo "attendo dati";
 sleep(50);
 echo "passati 50 sec";
 */
-$a = json_decode($saraObj->getDataPrj());
-var_dump($a);
+
+foreach ($saraObj->getDataPrj() as $img) {
+
+    echo $img;
+
+}
+
