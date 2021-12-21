@@ -9,20 +9,14 @@ require_once('library/saramart.php');
 $parse = new utils();
 $saraObj = new saramart();
 
+$datas = json_decode($saraObj->getDataPrj());
 
-//$keys = array("moncler", "moncler man"); return $parse->runPrj($keys);
-/*
-$saraObj->runPrj("nike af1");
-echo "attendo dati";
-sleep(50);
-echo "passati 50 sec";
-*/
 
-print_r($saraObj->getDataPrj());
+echo "<pre>";
 
-foreach ($saraObj->getDataPrj() as $key => $img) {
+foreach ($datas->type[0]->selection3 as $key => $data) {
 
-    $parse->prettyPrint($img);
+    //var_dump($img->image);
 
 }
 
