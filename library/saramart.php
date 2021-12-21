@@ -30,8 +30,6 @@ class saramart
     {
         if (!isset($keywords)) {
             throwException("Empty dats");
-        } else {
-            $keywords = str_replace(" ", "%20", $keywords); //spazio in url
         }
 
         $parsehub = new Parsehub($api_key);
