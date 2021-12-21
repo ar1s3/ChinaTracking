@@ -14,4 +14,4 @@ $saraObj = new saramart();
 
 
 echo "<pre>"; //ciao
-$parse->prettyPrint($saraObj->getDataPrj());
+$parse->prettyPrint("CIcciao");
