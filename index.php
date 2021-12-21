@@ -12,6 +12,4 @@ $saraObj = new saramart();
 
 //$keys = array("moncler", "moncler man"); return $parse->runPrj($keys);
 
-echo "oh";
-$parse->prettyPrint("CIcciao");
-echo "ohs";
+print_r($saraObj->getDataPrj());

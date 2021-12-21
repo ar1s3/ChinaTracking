@@ -16,13 +16,4 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 class utils
 {
 
-    public function prettyPrint($data): void
-    {
-        echo "<pre>";
-        print_r($data, true);
-        echo "</pre>";
-
-    }
-
-
 }
