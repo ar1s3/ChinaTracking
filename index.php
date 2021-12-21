@@ -10,5 +10,5 @@ $parse = new utils();
 //$keys = array("moncler", "moncler man"); return $parse->runPrj($keys);
 
 
-echo "<pre>";
+echo "<pre>"; //ciao
 print $parse->getDataPrj();
