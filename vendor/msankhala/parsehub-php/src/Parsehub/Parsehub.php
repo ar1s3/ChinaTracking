@@ -10,7 +10,8 @@ use Parsehub\Exception\HttpException;
 /**
  * Parsehub wrapper class.
  */
-class Parsehub {
+class Parsehub
+{
     /**
      * Parsehub api configuration.
      * @var array
@@ -27,7 +28,8 @@ class Parsehub {
      * constructor.
      * @todo Find a better way to manage config file.
      */
-    public function __construct($api_key, $api_url = '', $logpath = '') {
+    public function __construct($api_key, $api_url = '', $logpath = '')
+    {
         if (empty(self::$config)) {
             $logpath = empty($logpath) ? __DIR__ . '/../../log/parsehub.log' : $logpath;
             $api_url = empty($api_url) ? 'https://www.parsehub.com/api/v2' : $api_url;
@@ -50,7 +52,8 @@ class Parsehub {
      * @param string $run_token run token for which you want to get data.
      * @return string            json response.
      */
-    public function getRunData($run_token) {
+    public function getRunData($run_token)
+    {
         $url = $this->getRunDataApiUrl($run_token);
 
         //check url is valid and accessable
@@ -77,7 +80,8 @@ class Parsehub {
      * @param string $project_token project token to get last ready data for project
      * @return string                json response.
      */
-    public function getLastReadyRunData($project_token) {
+    public function getLastReadyRunData($project_token)
+    {
         $url = $this->getLastReadyRunDataApiUrl($project_token);
 
         //check url is valid and accessable
@@ -105,7 +109,8 @@ class Parsehub {
      * @param string $run_token run token whose run object you want to get.
      * @return string            json response.
      */
-    public function getRun($run_token) {
+    public function getRun($run_token)
+    {
         $url = $this->getRunApiUrl($run_token);
         $response = PHPHttpful::get($url)->send();
         if ($this->isResponseValid($response)) {
@@ -121,7 +126,8 @@ class Parsehub {
      *                               to get information.
      * @return string                json response.
      */
-    public function getProject($project_token, $offset = null) {
+    public function getProject($project_token, $offset = null)
+    {
         $url = $this->getProjectApiUrl($project_token, $offset);
         $response = PHPHttpful::get($url)->send();
         if ($this->isResponseValid($response)) {
@@ -135,7 +141,8 @@ class Parsehub {
      * Get list of all the parsehub project.
      * @return string json response.
      */
-    public function getProjectList() {
+    public function getProjectList()
+    {
         $url = $this->getProjectListApiUrl();
         $response = PHPHttpful::get($url)->send();
         if ($this->isResponseValid($response)) {
@@ -155,7 +162,8 @@ class Parsehub {
      *                               send_email = send email about run status.
      * @return string                run object if run successful otherwise return false.
      */
-    public function runProject($project_token, $options = array()) {
+    public function runProject($project_token, $options = array())
+    {
         $url = $this->getProjectRunApiUrl($project_token);
         $api_key = self::$config['api_key'];
 
@@ -239,7 +247,8 @@ class Parsehub {
      * @param string $run_token run token of a project run.
      * @return [type]            run token of canceled run.
      */
-    public function cancelProjectRun($run_token) {
+    public function cancelProjectRun($run_token)
+    {
         $url = $this->getProjectRunCancelApiUrl($run_token);
         $api_key = self::$config['api_key'];
         $requestbody = 'api_key=' . $api_key;
@@ -264,7 +273,8 @@ class Parsehub {
      * @return string            json response with run token that run was
      *                                deleted.
      */
-    public function deleteProjectRun($run_token) {
+    public function deleteProjectRun($run_token)
+    {
         $url = $this->getProjectRunDeleteApiUrl($run_token);
         $api_key = self::$config['api_key'];
 
@@ -278,7 +288,8 @@ class Parsehub {
 
     }
 
-    public function isResponseValid($response) {
+    public function isResponseValid($response)
+    {
         switch ($response->code) {
             case 200:
                 return true;
@@ -309,7 +320,8 @@ class Parsehub {
      * Get parsehub project list api url.
      * @return string REST api url for parsehub project list.
      */
-    public function getProjectListApiUrl() {
+    public function getProjectListApiUrl()
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/projects?api_key=' . $api_key;
@@ -321,7 +333,8 @@ class Parsehub {
      * @param string $project_token project information api url.
      * @return string                REST api url for parsehub project.
      */
-    public function getProjectApiUrl($project_token, $offset = null) {
+    public function getProjectApiUrl($project_token, $offset = null)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/projects/' . $project_token . '?api_key=' . $api_key;
@@ -336,7 +349,8 @@ class Parsehub {
      * @param string $run_token run token of a particular run.
      * @return string            REST api url for parsehub project run.
      */
-    public function getRunApiUrl($run_token) {
+    public function getRunApiUrl($run_token)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/runs/' . $run_token . '?api_key=' . $api_key;
@@ -348,7 +362,8 @@ class Parsehub {
      * @param string $run_token run token to get data.
      * @return string            REST api url for parsehub project run data.
      */
-    public function getRunDataApiUrl($run_token) {
+    public function getRunDataApiUrl($run_token)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/runs/' . $run_token . '/data' . '?api_key=' . $api_key;
@@ -361,7 +376,8 @@ class Parsehub {
      *                               data.
      * @return string                REST api url for project last ready run data.
      */
-    public function getLastReadyRunDataApiUrl($project_token) {
+    public function getLastReadyRunDataApiUrl($project_token)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/projects/' . $project_token . '/last_ready_run/data' . '?api_key=' . $api_key;
@@ -375,7 +391,8 @@ class Parsehub {
      * @return string                REST api url for running a parsehub
      *                               project.
      */
-    public function getProjectRunApiUrl($project_token) {
+    public function getProjectRunApiUrl($project_token)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/projects/' . $project_token . '/run';
@@ -387,7 +404,8 @@ class Parsehub {
      * @param string $run_token run token to stop a run.
      * @return string            REST api url to cancel a run.
      */
-    public function getProjectRunCancelApiUrl($run_token) {
+    public function getProjectRunCancelApiUrl($run_token)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/runs/' . $run_token . '/cancel';
@@ -399,7 +417,8 @@ class Parsehub {
      * @param string $run_token run token to stop a run.
      * @return string            REST api url to cancel a run.
      */
-    public function getProjectRunDeleteApiUrl($run_token) {
+    public function getProjectRunDeleteApiUrl($run_token)
+    {
         $api_key = self::$config['api_key'];
         $api_url = self::$config['api_url'];
         $url = $api_url . '/runs/' . $run_token . '?api_key=' . $api_key;
@@ -411,7 +430,8 @@ class Parsehub {
      * @param string $url url to check
      * @return integer http status
      */
-    public function getHttpStatusCode($url) {
+    public function getHttpStatusCode($url)
+    {
         $handler = curl_init($url);
         curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($handler, CURLOPT_NOBODY, true);
@@ -424,7 +444,8 @@ class Parsehub {
      * @param integer $status http status code
      * @return string status message
      */
-    public function getHttpStatusMessage($status) {
+    public function getHttpStatusMessage($status)
+    {
         switch ($status) {
             case 400:
                 return 'Bad request. Not able to get data from parsehub.';
