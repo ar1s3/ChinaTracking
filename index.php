@@ -22,7 +22,7 @@ print_r($saraObj->getDataPrj());
 
 foreach ($saraObj->getDataPrj() as $key => $img) {
 
-    echo $img;
+    $parse->prettyPrint($img);
 
 }
 

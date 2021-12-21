@@ -13,9 +13,11 @@ error_reporting(E_ALL);
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-class utils
-{
+class utils {
 
+    public function prettyPrint($var) {
+        echo "<pre>" . print_r($var);
+    }
 
 
 }
