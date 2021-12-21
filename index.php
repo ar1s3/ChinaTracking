@@ -7,8 +7,9 @@ require_once('library/utils.php');
 
 $parse = new utils();
 
+
 //$keys = array("moncler", "moncler man"); return $parse->runPrj($keys);
 
 
 echo "<pre>"; //ciao
-print $parse->getDataPrj();
+$parse ->prettyPrint($parse->getDataPrj());
