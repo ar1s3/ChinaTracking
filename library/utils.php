@@ -18,7 +18,9 @@ class utils
 
     public function prettyPrint($data): void
     {
-        "<pre>" . print_r($data, true) . "</pre>";
+        echo "<pre>";
+        print_r($data, true);
+        echo "</pre>";
 
     }
 
