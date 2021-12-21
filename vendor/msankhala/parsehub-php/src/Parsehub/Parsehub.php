@@ -236,8 +236,8 @@ class Parsehub
                     )
                 ]);
             }
-            $data = $response->body;
-            return $data;
+            //$data = $response->body;             return $data;
+            return $response->body;
         }
         return $response;
     }
