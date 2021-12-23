@@ -12,7 +12,7 @@ $datas = json_decode($saraObj->getDataPrj());
 
 echo "<pre>";
 
-var_dump($datas);
+//var_dump($datas);
 /*
 foreach ($datas->type[0]->selection3 as $key => $data) {
 
@@ -22,4 +22,6 @@ foreach ($datas->type[0]->selection3 as $key => $data) {
     }
 
 }  */
+
+echo $saraObj->runPrj("moncler");
 
