@@ -36,7 +36,7 @@ class saramart
         $options = array(
             // Skip start_url option if don't want to override starting url configured
             // on parsehub.
-            'start_url' => 'https://www.saramart.pl/it-IT/s/',
+            'start_url' => 'https://www.saramart.pl/en-IT/s/',
             // Enter comma separated list of keywords to pass into `start_value_override`
             'keywords' => $keywords,
             // Set send_email options. Skip to remain this value default.
