@@ -16,14 +16,14 @@ class saramart
         return ($projectList);
     }
 
-    /* return dati del progetto
+    /* return dati del progetto */
     public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string
     {
 
         $parsehub = new Parsehub($api_key);
         return $parsehub->getLastReadyRunData($prj_key);
 
-    }*/
+    }
 
     /* esegue parsing su keys */
     public function runPrj(string $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY)

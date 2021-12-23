@@ -8,7 +8,7 @@ require_once('library/saramart.php');
 
 $parse = new utils();
 $saraObj = new saramart();
-$datas = json_decode($saraObj->getDataPrj());
+//$datas = json_decode($saraObj->getDataPrj());
 
 echo "<pre>";
 
