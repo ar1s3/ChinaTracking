@@ -23,5 +23,8 @@ foreach ($datas->type[0]->selection3 as $key => $data) {
 
 }  */
 
-echo $saraObj->runPrj("moncler");
+//echo $saraObj->runPrj("moncler");
+
+print($saraObj->getDataPrj());
+
 
