@@ -8,10 +8,18 @@ require_once('library/saramart.php');
 
 $parse = new utils();
 $saraObj = new saramart();
-$datas = json_decode($saraObj->getDataPrj());
+
+// ================================================================================ \\
+
+$saraArray = json_decode($saraObj->getDataPrj(), true);
+$datas = $saraArray["type"][0];
+$searchTerm = $datas['searchterm'];
+
 
 echo "<pre>";
+//>
 
-print($datas);
+
+print_r($datas);
 
 
