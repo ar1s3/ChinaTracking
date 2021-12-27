@@ -9,29 +9,22 @@ require_once('library/saramart.php');
 $util = new utils();
 $saraObj = new saramart();
 
-// ================================================================================ \\
-
 $saraArray = json_decode($saraObj->getDataPrj(), true);
 $datas = $saraArray["type"][0];
 $searchTerm = $datas['searchterm'];
+
+// ================================================================================ \\
 
 $details = $datas['DETAILS'];
 $desc_item = $datas['DESC_ITEM'];
 echo "<pre>";
 
-$details = array_map("unserialize", array_unique(array_map("serialize", $details)));
-$desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_item)));
+$details = $util->deDuplicate($details);
+$desc_item = $util->deDuplicate($desc_item);
 
-if (count($details) !== count($desc_item)) {
-    echo "Different array size";
-    die;
-}
+$util->checkArraysize($details, $desc_item);
+$details = $util->addDescItemTo($desc_item, $details);
 
-for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
-
-    $details[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
-
-}
 ?>
 <html>
 
@@ -41,9 +34,9 @@ for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
 
 <?php
 
-foreach($details as $dets){
+foreach ($details as $dets) {
 
-    echo "<p>". $dets["ITEM_URL"]."</p>";
+    echo "<p>" . $dets["ITEM_URL"] . "</p>";
 
 }
 

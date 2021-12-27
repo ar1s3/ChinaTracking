@@ -21,14 +21,30 @@ class utils
         echo "<pre>" . print_r($var);
     }
 
-    public function implode_all($glue, $arr): string
+    public function deDuplicate($arr): array
     {
-        for ($i = 0, $iMax = count($arr); $i < $iMax; $i++) {
-            if (@is_array($arr[$i])) {
-                $arr[$i] = self::implode_all($glue, $arr[$i]);
-            }
+        return array_map("unserialize", array_unique(array_map("serialize", $arr)));
+    }
+
+
+    public function checkArraysize(array $a, array $b): void
+    {
+        if (count($a) !== count($b)) {
+            echo "Different array size";
+            die;
         }
-        return implode($glue, $arr);
+    }
+
+    function addDescItemTo(array $desc_item, array $array): array
+    {
+
+
+        for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
+
+            $array[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
+
+        }
+        return $array;
     }
 
 
