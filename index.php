@@ -31,11 +31,16 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 
 foreach ($details as &$det) {
 
-    foreach ($desc_item as $desc) {
 
-        $det['pippo']= $desc['name'];
-
+    while ($arrLength = count($desc_item) <= 39) {
+        $det['pippo'] = $desc_item['name'];
     }
+
+    /*foreach ($desc_item as $desc) {
+
+
+
+    }*/
 
 }
 
