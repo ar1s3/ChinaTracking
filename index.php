@@ -22,27 +22,14 @@ echo "<pre>";
 $details = array_map("unserialize", array_unique(array_map("serialize", $details)));
 $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_item)));
 
+if (count($details) !== count($desc_item)) {
+    echo "Different array size";
+    die;
+}
 
-//>
+for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
 
-
-//print_r($details);
-//echo $util->implode_all("\n", $desc_item);
-
-//foreach ($details as &$det) {
-
-
-    for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
-
-        $details[$i]['pipp'] = $desc_item[$i]['name'];
-
-//    }
-
-    /*foreach ($desc_item as $desc) {
-
-
-
-    }*/
+    $details[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
 
 }
 
