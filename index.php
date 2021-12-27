@@ -19,8 +19,6 @@ $details = $datas['DETAILS'];
 $desc_item = $datas['DESC_ITEM'];
 echo "<pre>";
 
-print_r($details);
-
 $details = array_map("unserialize", array_unique(array_map("serialize", $details)));
 $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_item)));
 
@@ -29,3 +27,4 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 
 
 print_r($details);
+print_r($desc_item);
