@@ -23,8 +23,10 @@ $desc_item = $util->deDuplicate($desc_item);
 
 $util->checkArraysize($details, $desc_item);
 $details = $util->addDescItemTo($desc_item, $details);
+foreach ($details as $dets){
 
-print_r($details);die;
+    echo  $dets['IMG_URL'];
+}
 
 ?>
 <!-- HTML BEGIN -->
