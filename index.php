@@ -79,7 +79,7 @@ $details = $util->addDescItemTo($desc_item, $details);
                         <div class="text-center">
 
                             <!-- Product name-->
-                            <h5 class="fw-bolder"><?php $dets['DESC_ITEM'];?></h5>
+                            <h5 class="fw-bolder"><?php echo $dets['DESC_ITEM'];?></h5>
 
                             <!-- Product reviews
                             <div class="d-flex justify-content-center small text-warning mb-2">
@@ -93,12 +93,12 @@ $details = $util->addDescItemTo($desc_item, $details);
 
                             <!-- Product price
                             <span class="text-muted text-decoration-line-through">$20.00</span>-->
-                            <?php $dets['ITEM_PRICE'];?>€
+                            <?php echo $dets['ITEM_PRICE'];?>€
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="<?php echo $dets['ITEM_URL'];?>">URL</a></div>
                     </div>
                 </div>
             </div>
