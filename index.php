@@ -29,14 +29,14 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 //print_r($details);
 //echo $util->implode_all("\n", $desc_item);
 
-foreach ($details as &$det) {
+//foreach ($details as &$det) {
 
 
     for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
 
-        $det['pipp'] = $desc_item[$i]['name'];
+        $details[$i]['pipp'] = $desc_item[$i]['name'];
 
-    }
+//    }
 
     /*foreach ($desc_item as $desc) {
 
