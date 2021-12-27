@@ -33,7 +33,7 @@ foreach ($desc_item as $desc) {
 
     foreach ($details as $det) {
 
-        $desc['pippo'] = $det['name'];
+        $desc['pippo'][] = $det['name'];
 
     }
 
