@@ -59,8 +59,9 @@ $details = $util->addDescItemTo($desc_item, $details);
             <div class="col mb-5">
                 <div class="card h-100">
 
-                    <!-- Sale badge-->
+                    <!-- Sale badge
                     <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    -->
 
                     <!-- Product image-->
                     <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
@@ -72,7 +73,7 @@ $details = $util->addDescItemTo($desc_item, $details);
                             <!-- Product name-->
                             <h5 class="fw-bolder">Special Item</h5>
 
-                            <!-- Product reviews-->
+                            <!-- Product reviews
                             <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
                                 <div class="bi-star-fill"></div>
@@ -80,9 +81,10 @@ $details = $util->addDescItemTo($desc_item, $details);
                                 <div class="bi-star-fill"></div>
                                 <div class="bi-star-fill"></div>
                             </div>
+                            -->
 
-                            <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            <!-- Product price
+                            <span class="text-muted text-decoration-line-through">$20.00</span>-->
                             $18.00
                         </div>
                     </div>
