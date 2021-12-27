@@ -75,7 +75,7 @@ foreach ($details as $dets){
                     -->
 
                     <!-- Product image-->
-                    <img class="card-img-top" src="<?php $dets['IMG_URL'];?>" alt="..." />
+                    <img class="card-img-top" src="<?php echo $dets['IMG_URL'];?>" alt="..." />
 
                     <!-- Product details-->
                     <div class="card-body p-4">
