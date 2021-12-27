@@ -15,11 +15,17 @@ $saraArray = json_decode($saraObj->getDataPrj(), true);
 $datas = $saraArray["type"][0];
 $searchTerm = $datas['searchterm'];
 
-
+$details = $datas['DETAILS'];
+$desc_item = $datas['DESC_ITEM'];
 echo "<pre>";
+
+print_r($details);
+
+$details = array_map("unserialize", array_unique(array_map("serialize", $details)));
+$desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_item)));
+
+
 //>
 
 
-print_r($datas);
-
-
+print_r($details);
