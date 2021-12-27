@@ -25,7 +25,7 @@ class utils
     {
         for ($i = 0, $iMax = count($arr); $i < $iMax; $i++) {
             if (@is_array($arr[$i])) {
-                $arr[$i] = implode_all($glue, $arr[$i]);
+                $arr[$i] = self::implode_all($glue, $arr[$i]);
             }
         }
         return implode($glue, $arr);
