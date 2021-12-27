@@ -17,7 +17,7 @@ $searchTerm = $datas['searchterm'];
 
 $details = $datas['DETAILS'];
 $desc_item = $datas['DESC_ITEM'];
-echo "<pre>";
+//echo "<pre>";
 
 $details = $util->deDuplicate($details);
 $desc_item = $util->deDuplicate($desc_item);
