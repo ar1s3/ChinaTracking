@@ -32,5 +32,24 @@ for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
     $details[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
 
 }
+?>
+<html>
 
-print_r($details);
+<title>PARSING</title>
+
+<body>
+
+<?php
+
+foreach($details as $dets){
+
+    echo "<p>". $dets["ITEM_URL"]."</p>";
+
+}
+
+?>
+
+</body>
+
+</html>
+
