@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once('library/utils.php');
 require_once('library/saramart.php');
 
-$parse = new utils();
+$util = new utils();
 $saraObj = new saramart();
 
 // ================================================================================ \\
@@ -27,4 +27,4 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 
 
 //print_r($details);
-echo $parse->implode_all("\n", $desc_item);
+echo $util->implode_all(",", $desc_item);

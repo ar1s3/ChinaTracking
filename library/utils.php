@@ -21,7 +21,7 @@ class utils
         echo "<pre>" . print_r($var);
     }
 
-    public function implode_all($glue, $arr)
+    public function implode_all($glue, $arr): string
     {
         for ($i = 0, $iMax = count($arr); $i < $iMax; $i++) {
             if (@is_array($arr[$i])) {
