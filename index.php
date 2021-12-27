@@ -28,12 +28,14 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 
 //print_r($details);
 //echo $util->implode_all("\n", $desc_item);
-
+$arrLength = count($desc_item) <= 39;
+$i = 0;
 foreach ($details as &$det) {
 
 
-    while ($arrLength = count($desc_item) <= 39) {
+    while ($i <= $arrLength) {
         $det['pippo'] = $desc_item['name'];
+        $i++;
     }
 
     /*foreach ($desc_item as $desc) {
