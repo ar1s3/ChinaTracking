@@ -31,11 +31,11 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 
 foreach ($desc_item as $desc) {
 
-    foreach ($details as $det) {
+    //foreach ($details as $det) {
 
-        $desc['pippo'][] = $det['name'];
+        $desc['pippo']= 'test';
 
-    }
+    //}
 
 }
 
