@@ -27,7 +27,7 @@ $details = $util->addDescItemTo($desc_item, $details);
 
 ?>
 <!-- HTML BEGIN -->
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
