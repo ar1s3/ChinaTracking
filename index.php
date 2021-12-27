@@ -26,5 +26,5 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 //>
 
 
-print_r($details);
-print_r($desc_item);
+//print_r($details);
+echo $parse->implode_all("\n", $desc_item);
