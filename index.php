@@ -29,11 +29,11 @@ $desc_item = array_map("unserialize", array_unique(array_map("serialize", $desc_
 //print_r($details);
 //echo $util->implode_all("\n", $desc_item);
 
-foreach ($desc_item as &$desc) {
+foreach ($details as &$det) {
 
     //foreach ($details as $det) {
 
-        $desc['pippo']= 'test';
+        $det['pippo']= 'test';
 
     //}
 
