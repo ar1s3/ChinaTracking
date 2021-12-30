@@ -24,7 +24,7 @@ class utils {
     }
 
 
-    public function checkArraysize(array $a, array $b): {
+    public function checkArraysize(array $a, array $b) {
         if (count($a) !== count($b)) {
             echo "Different array size";
             die;
