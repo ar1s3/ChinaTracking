@@ -13,30 +13,25 @@ error_reporting(E_ALL);
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-class utils
-{
+class utils {
 
-    public function prettyPrint($var)
-    {
+    public function prettyPrint($var) {
         echo "<pre>" . print_r($var);
     }
 
-    public function deDuplicate($arr): array
-    {
+    public function deDuplicate($arr): array {
         return array_map("unserialize", array_unique(array_map("serialize", $arr)));
     }
 
 
-    public function checkArraysize(array $a, array $b): void
-    {
+    public function checkArraysize(array $a, array $b): void {
         if (count($a) !== count($b)) {
             echo "Different array size";
             die;
         }
     }
 
-    function addDescItemTo(array $desc_item, array $array): array
-    {
+    function addDescItemTo(array $desc_item, array $array): array {
 
 
         for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
