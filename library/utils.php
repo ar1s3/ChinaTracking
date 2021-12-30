@@ -32,11 +32,13 @@ class utils {
     }
 
     function addDescItemTo(array $desc_item, array $array): array {
-
+//base64 "IMG_URL": "data:image
 
         for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
 
-            $array[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
+            if (strpos($array[$i]['IMG_URL'], "data:image") === false) {
+                $array[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
+            }
 
         }
         return $array;
