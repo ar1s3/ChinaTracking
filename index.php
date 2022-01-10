@@ -61,48 +61,109 @@ $cleanedArray = $util->deDuplicate($cleanedArray);
     </div>
 </header>
 
-<section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+<!-- Tabs navs -->
+<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link active"
+                id="ex1-tab-1"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-1"
+                role="tab"
+                aria-controls="ex1-tabs-1"
+                aria-selected="true"
+        >Tab 1</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-2"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-2"
+                role="tab"
+                aria-controls="ex1-tabs-2"
+                aria-selected="false"
+        >Tab 2</a
+        >
+    </li>
+    <li class="nav-item" role="presentation">
+        <a
+                class="nav-link"
+                id="ex1-tab-3"
+                data-mdb-toggle="tab"
+                href="#ex1-tabs-3"
+                role="tab"
+                aria-controls="ex1-tabs-3"
+                aria-selected="false"
+        >Tab 3</a
+        >
+    </li>
+</ul>
+<!-- Tabs navs -->
 
-            <?php foreach ($cleanedArray as $dets => $d) { ?>
+<!-- Tabs content -->
+<div class="tab-content" id="ex1-content">
+    <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
 
-                <div class="col mb-5">
-                <div class="card h-100"> <!-- SCHEDA ITEM -->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
-                    <!-- Sale badge
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                    -->
+                    <?php foreach ($cleanedArray as $dets => $d) { ?>
 
-                    <!-- Product image-->
-                    <img class="card-img-top" src="<?php echo $d['IMG_URL']; ?>"/><!--  width="420" height="420" -->
+                        <div class="col mb-5">
+                        <div class="card h-100"> <!-- SCHEDA ITEM -->
 
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
+                            <!-- Sale badge
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            -->
 
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">TEST</h5>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="<?php echo $d['IMG_URL']; ?>"/>
+                            <!--  width="420" height="420" -->
 
-                            <!-- Product price
-                            <span class="text-muted text-decoration-line-through">$20.00</span>-->
-                            <?php echo $d['ITEM_PRICE']; ?>€
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">TEST</h5>
+
+                                    <!-- Product price
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>-->
+                                    <?php echo $d['ITEM_PRICE']; ?>€
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                                            href="<?php echo $d['ITEM_URL']; ?>  target="
+                                                            _blank">URL</a></div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto"
-                                                    href="<?php echo $d['ITEM_URL']; ?>  target=" _blank">URL</a></div>
-                    </div>
+
+                        </div><?php } ?>
+
                 </div>
 
-                </div><?php } ?>
+            </div>
 
-        </div>
+        </section>
 
     </div>
 
-</section>
+    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+        Tab 2 content
+    </div>
+
+    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+        Tab 3 content
+    </div>
+
+</div>
+<!-- Tabs content -->
+
 
 </body>
 
