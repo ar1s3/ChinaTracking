@@ -33,65 +33,57 @@ $cleanedArray = $util->deDuplicate($cleanedArray);
 
 
 ?>
-<!-- HTML BEGIN -->
 <!DOCTYPE html>
-<html lang="en">
-
-<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <title>Hello, world!</title>
+    <title>Show Bootstrap Tab Using jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myTab a:last").tab("show"); // show last tab
+        });
+    </script>
 </head>
-
-
-<header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">TEST N1</h1>
-            <p class="lead fw-normal text-white-50 mb-0">CAPTION N1</p>
-        </div>
-    </div>
-</header>
-
 <body>
-
-<div class="container"><h1>Bootstrap tab panel example (using nav-pills) </h1></div>
-<div id="exTab1" class="container">
-    <ul class="nav nav-pills">
-        <li class="active">
-            <a href="#1a" data-toggle="tab">Overview</a>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a>
         </li>
-        <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab">Profile</a>
         </li>
-        <li><a href="#3a" data-toggle="tab">Applying clearfix</a>
-        </li>
-        <li><a href="#4a" data-toggle="tab">Background color</a>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link" data-bs-toggle="tab">Messages</a>
         </li>
     </ul>
-
-    <div class="tab-content clearfix">
-        <div class="tab-pane active" id="1a">
-            <h3>Content's background color is the same for the tab</h3>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <h4 class="mt-2">Home tab content</h4>
+            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate
+                nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
+                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
         </div>
-        <div class="tab-pane" id="2a">
-            <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the
-                tab</h3>
+        <div class="tab-pane fade" id="profile">
+            <h4 class="mt-2">Profile tab content</h4>
+            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
+                mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
+                turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
+                Nunc facilisis leo at faucibus adipiscing.</p>
         </div>
-        <div class="tab-pane" id="3a">
-            <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-        </div>
-        <div class="tab-pane" id="4a">
-            <h3>We use css to change the background color of the content to be equal to the tab</h3>
+        <div class="tab-pane fade" id="messages">
+            <h4 class="mt-2">Messages tab content</h4>
+            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at
+                erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet.
+                Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus
+                imperdiet. Cum sociis natoque penatibus et magnis.</p>
         </div>
     </div>
 </div>
-
 </body>
-
 </html>
