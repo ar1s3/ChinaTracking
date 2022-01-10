@@ -9,6 +9,14 @@ require_once('library/saramart.php');
 $util = new utils();
 $saraObj = new saramart();
 
+$saraObj->runPrj("nike");
+
+echo "started";
+
+sleep(60);
+
+echo "finish - getting data";
+
 $saraArray = json_decode($saraObj->getDataPrj(), true);
 
 
