@@ -42,13 +42,32 @@ $cleanedArray = $util->deDuplicate($cleanedArray);
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Shop Homepage - Start Bootstrap Template</title>
-    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
-    <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
-    <!-- Core theme CSS (includes Bootstrap)-->
+
     <link href="css/styles.css" rel="stylesheet"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
 
 <body>
 
@@ -61,109 +80,122 @@ $cleanedArray = $util->deDuplicate($cleanedArray);
     </div>
 </header>
 
-<!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a
-                class="nav-link active"
-                id="ex1-tab-1"
-                data-mdb-toggle="tab"
-                href="#ex1-tabs-1"
-                role="tab"
-                aria-controls="ex1-tabs-1"
-                aria-selected="true"
-        >Tab 1</a
-        >
-    </li>
-    <li class="nav-item" role="presentation">
-        <a
-                class="nav-link"
-                id="ex1-tab-2"
-                data-mdb-toggle="tab"
-                href="#ex1-tabs-2"
-                role="tab"
-                aria-controls="ex1-tabs-2"
-                aria-selected="false"
-        >Tab 2</a
-        >
-    </li>
-    <li class="nav-item" role="presentation">
-        <a
-                class="nav-link"
-                id="ex1-tab-3"
-                data-mdb-toggle="tab"
-                href="#ex1-tabs-3"
-                role="tab"
-                aria-controls="ex1-tabs-3"
-                aria-selected="false"
-        >Tab 3</a
-        >
-    </li>
-</ul>
-<!-- Tabs navs -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="container w3-animate-opacity">
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Servers')">Servers List</button>
+        <button class="tablinks" onclick="openCity(event, 'Fruits')">Fruits Price</button>
+        <button class="tablinks" onclick="openCity(event, 'Workers')">Workers List</button>
+    </div>
+    <div id="Servers" class="tabcontent">
+        <table class="w3-animate-opacity">
+            <tr>
+                <th>Servers List</th>
+                <th>Status</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Ubuntu Server 16.04.4</td>
+                <td class="actived"><a href="#">Available</a></td>
+                <td>1 year, 11 months, 23 hours, 59minutes, 59seconds</td>
+            </tr>
+            <tr>
+                <td>Virtual Machine Windows Server 2002</td>
+                <td class="actived"><a href="#">Available</a></td>
+                <td>2 year, 11 months, 23 hours, 59minutes, 59seconds</td>
+            </tr>
+            <tr>
+                <td>Windows 10 Spark server</td>
+                <td class="deactivated"><a href="#">Unavailable</a></td>
+                <td>0 year, 6 months, 2 hours, 9minutes, 40seconds</td>
+            </tr>
+            <tr>
+                <td>Windows XP Professional</td>
+                <td class="deactivated"><a href="#">Unavailable</a></td>
+                <td>0 year, 0 month, 0 hours, 0 minutes, 0 seconds</td>
+            </tr>
 
-<!-- Tabs content -->
-<div class="tab-content" id="ex1-content">
-    <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-
-                    <?php foreach ($cleanedArray as $dets => $d) { ?>
-
-                        <div class="col mb-5">
-                        <div class="card h-100"> <!-- SCHEDA ITEM -->
-
-                            <!-- Sale badge
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            -->
-
-                            <!-- Product image-->
-                            <img class="card-img-top" src="<?php echo $d['IMG_URL']; ?>"/>
-                            <!--  width="420" height="420" -->
-
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">TEST</h5>
-
-                                    <!-- Product price
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>-->
-                                    <?php echo $d['ITEM_PRICE']; ?>€
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
-                                                            href="<?php echo $d['ITEM_URL']; ?>  target="
-                                                            _blank">URL</a></div>
-                            </div>
-                        </div>
-
-                        </div><?php } ?>
-
-                </div>
-
-            </div>
-
-        </section>
-
+        </table>
     </div>
 
-    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-        Tab 2 content
+    <div id="Fruits" class="tabcontent w3-animate-opacity">
+        <table>
+            <tr>
+                <th>Fruits</th>
+                <th>Ammount</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>1 unit</td>
+                <td>U$ 0,10</td>
+            </tr>
+            <tr>
+                <td>Pineapple</td>
+                <td>1 unit</td>
+                <td>U$ 0,20</td>
+            </tr>
+            <tr>
+                <td>Strawberry</td>
+                <td>1 unit</td>
+                <td>U$ 0,40</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>2 units</td>
+                <td>U$ 0,40</td>
+            </tr>
+
+        </table>
     </div>
 
-    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-        Tab 3 content
+    <div id="Workers" class="tabcontent w3-animate-opacity">
+        <table>
+            <tr>
+                <th>Officers</th>
+                <th>Department</th>
+                <th>Date of birth</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Leandro Bizzinotto Ferreira</td>
+                <td>Web Designer</td>
+                <td>23/09/1994</td>
+                <td class="intraining">In training</td>
+            </tr>
+            <tr>
+                <td>Cristiano Bizzinotto Ferreira</td>
+                <td>Advertising</td>
+                <td>23/09/1994</td>
+                <td class="available">Available</td>
+            </tr>
+            <tr>
+                <td>Amanda Maria Bizzinotto Ferreira</td>
+                <td>Polyglot, Translator, Developer</td>
+                <td>17/07/1993</td>
+                <td class="vacation">Vacation</td>
+            </tr>
+            <tr>
+                <td>Luis Antonio Ferreira</td>
+                <td>Personal Manager</td>
+                <td>20/08/1966</td>
+                <td class="available">Available</td>
+            </tr>
+            <tr>
+                <td>Luis Antonio Ferreira</td>
+                <td>Personal Manager</td>
+                <td>20/08/1968</td>
+                <td class="available">Available</td>
+            </tr>
+            <tr>
+                <td>Rita Helena Bizzinotto Ferreira</td>
+                <td>Housewife</td>
+                <td>20/07/1962</td>
+                <td class="disable">Disable</td>
+            </tr>
+        </table>
     </div>
-
 </div>
-<!-- Tabs content -->
-
 
 </body>
 
