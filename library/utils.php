@@ -16,7 +16,8 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 class utils {
 
     public function prettyPrint($var) {
-        echo "<pre>" . print_r($var);
+        echo '<pre>', print_r($var, 1), '</pre>';
+
     }
 
     public function deDuplicate($arr): array {
@@ -31,17 +32,22 @@ class utils {
         }
     }
 
-    function addDescItemTo(array $desc_item, array $array): array {
-//base64 "IMG_URL": "data:image
+    function cleanArray(array $items) {
+        //base64 "IMG_URL": "data:image
 
-        for ($i = 0, $iMax = count($desc_item); $i < $iMax; $i++) {
+        foreach ($items as $item => &$i) {
+            if (strpos($i['IMG_URL'], "data:image") !== false) {
 
-            if (strpos($array[$i]['IMG_URL'], "data:image") === false) {
-                $array[$i]['DESC_ITEM'] = $desc_item[$i]['name'];
+                //  echo $i['IMG_URL'] . "\n";
+
+                unset($items[$item]);
+                //    print_r($i);
             }
 
+        unset($i);
+
         }
-        return $array;
+        return($items);
     }
 
 
