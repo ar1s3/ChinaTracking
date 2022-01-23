@@ -6,19 +6,16 @@ use function PHPUnit\Framework\throwException;
 const MY_API_KEY = "tTXn1ETK9h_V";
 const MY_PRJ_KEY = "ty88FLuX1Gta";
 
-class saramart
-{
+class saramart {
 
-    public function getPrjList($api_key = MY_API_KEY)
-    {
+    public function getPrjList($api_key = MY_API_KEY) {
         $parsehub = new Parsehub($api_key);
         $projectList = $parsehub->getProjectList();
         return ($projectList);
     }
 
     /* return dati del progetto */
-    public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string
-    {
+    public function getDataPrj($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY): string {
 
         $parsehub = new Parsehub($api_key);
         return $parsehub->getLastReadyRunData($prj_key);
@@ -26,10 +23,10 @@ class saramart
     }
 
     /* esegue parsing su keys */
-    public function runPrj(string $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY)
-    {
+    public function runPrj(string $keywords, $api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
+
         if (!isset($keywords)) {
-            throwException("Empty dats");
+            throwException("Empty data");
         }
 
         $parsehub = new Parsehub($api_key);
@@ -43,7 +40,15 @@ class saramart
             'send_email' => 0
         );
         return $parsehub->runProject($prj_key, $options);
+    }
 
+    public function checkEmptiness($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
+        $parsehub = new Parsehub($api_key);
+        return $parsehub->getProject($prj_key);
+
+        //return get_object_vars($res);
+        //return json_decode(json_encode($parsehub->getProject($prj_key)), true);//->id
 
     }
+
 }
