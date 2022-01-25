@@ -42,12 +42,17 @@ class saramart {
         return $parsehub->runProject($prj_key, $options);
     }
 
+    public function clearProject($run_key, $api_key = MY_API_KEY) {
+
+        $parsehub = new Parsehub($api_key);
+
+        return $parsehub->getProject($run_key);
+
+    }
+
     public function checkEmptiness($api_key = MY_API_KEY, $prj_key = MY_PRJ_KEY) {
         $parsehub = new Parsehub($api_key);
         return $parsehub->getProject($prj_key);
-
-        //return get_object_vars($res);
-        //return json_decode(json_encode($parsehub->getProject($prj_key)), true);//->id
 
     }
 

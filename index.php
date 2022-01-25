@@ -11,55 +11,8 @@ require_once('library/saramart.php');
 $util = new utils();
 $saraObj = new saramart();
 
-if (isset($_POST['item']) & !empty($_POST['item'])) {
+?>
 
-    $item = $_POST['item'];
-
-    try {
-        $saraObj->runPrj($item);
-
-    } catch (Exception $e) {
-        var_dump("ERROR: $e");
-    }
-
-
-} else {
-    echo "<pre>";
-    $test = json_decode(json_encode($saraObj->checkEmptiness()));
-
-    //$test = json_decode($test);
-
-    print_r($test->last_run->pages);
-    die;
-
-    //print_r($test['last_run']);die;
-
-    /*foreach ($test as $key => $value){
-
-        if($key == "maintained"){
-            print_r(json_encode($value));
-        }
-
-    }*/
-
-    die;
-
-    echo "<div class=\"alert alert-warning alert-dismissible fade show\">
-        <strong>Warning!</strong> There was a problem with your network connection.
-        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button>
-    </div>";
-
-
-    $saraArray = json_decode($saraObj->getDataPrj(), true);
-
-
-    $st = $saraArray['type']['0']['searchterm'];
-    $items = $saraArray['type']['0']['DETAILS'];
-
-    $cleanedArray = $util->cleanArray($items);
-    $cleanedArray = $util->deDuplicate($cleanedArray);
-
-    ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -83,15 +36,74 @@ if (isset($_POST['item']) & !empty($_POST['item'])) {
                 <p class="lead fw-normal text-white-50 mb-0">CAPTION N1</p>
             </div>
         </div>
-
-
     </header>
+
     <div class="text-center text-black">
         <form name="s1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             Cerca: <input type="text" name="item"><br>
             <input type="submit">
         </form>
     </div>
+
+<?php
+
+
+if (isset($_POST['item']) & !empty($_POST['item'])) {
+
+    $its = $_POST['item'];
+    echo "<pre>";
+
+    $response = json_decode(json_encode($saraObj->checkEmptiness()));
+    $run_token = "";
+
+    //print_r($response->run_list[0]->pages);die;
+
+    $run_tks = (array_column((array)$response, 'run_token'));
+
+
+    //cancella dati
+    if (!empty($run_tks)) {
+
+        foreach ($run_tks as $item => $i) {
+            $saraObj->clearProject($i);
+        }
+    }
+
+    try {
+
+        $saraObj->runPrj($its);
+
+    } catch (Exception $e) {
+        var_dump("ERROR: $e");
+        die;
+    }
+
+
+} else {
+    $response = json_decode(json_encode($saraObj->checkEmptiness()));
+    /*echo "<pre>";
+    print_r($response->last_ready_run);
+    die;
+    print_r(__LINE__);die;
+    */
+
+    if ($response->last_ready_run && $response->last_ready_run->pages > 0) {
+
+        $saraArray = json_decode($saraObj->getDataPrj(), true);
+
+
+        $st = $saraArray['type']['0']['searchterm'];
+        $items = $saraArray['type']['0']['DETAILS'];
+
+        $cleanedArray = $util->cleanArray($items);
+        $cleanedArray = $util->deDuplicate($cleanedArray);
+    } else { ?>
+
+        <div class="alert alert-primary" role="alert">
+            ricerca item vuoto!
+        </div>
+
+    <?php } ?>
 
     <body>
     <div class="m-4">
@@ -156,7 +168,8 @@ if (isset($_POST['item']) & !empty($_POST['item'])) {
             </div>
             <div class="tab-pane fade" id="ae">
                 <h4 class="mt-2">Profile tab content</h4>
-                <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
+                <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida
+                    ut,
                     mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit
                     bibendum
                     turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum
@@ -165,7 +178,8 @@ if (isset($_POST['item']) & !empty($_POST['item'])) {
             </div>
             <div class="tab-pane fade" id="lb">
                 <h4 class="mt-2">Messages tab content</h4>
-                <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec
+                <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit.
+                    Donec
                     at
                     erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum
                     laoreet.
