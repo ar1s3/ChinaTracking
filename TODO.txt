@@ -1,0 +1,13 @@
+INDEX
+
+1. al caricamento della page cancellare progetti parse hub
+
+                OPPURE
+
+2. caricamento page non mostrare nulla, al momento della ricerca cancellare progetti parsehub
+
+
+
+
+
+
